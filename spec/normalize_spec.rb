@@ -1,8 +1,8 @@
 require "spec_helper"
 
 describe NormalizeUrl do
-  def n(*args)
-    described_class.process(*args)
+  def n(url, **args)
+    described_class.process(url, **args)
   end
 
   it "raises NormalizeUrl::InvalidURIError when input is not an URL" do
